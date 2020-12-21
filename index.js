@@ -11,6 +11,11 @@ app.listen(port, () => console.log("Listening on port!"));
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  return res.status(200).send({
+    message: "Mail Servuice is Listening on this Server!",
+  });
+})
 app.post("/send", (req, res, next) => {
 
   const { email, htmlToSend } = req.body;
