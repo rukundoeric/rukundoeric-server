@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   return res.status(200).send({
-    message: "Mail Servuice is Listening on this Server!",
+    message: "Mail Service is Listening on this Server!",
   });
 })
 app.post("/send", (req, res, next) => {
